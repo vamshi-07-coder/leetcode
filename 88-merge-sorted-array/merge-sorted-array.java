@@ -1,0 +1,23 @@
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        // List<Integer> list=new ArrayList(Arrays.asList());
+        // for(int i=0;i<m;i++){
+        //     list.add(nums1[i]);
+        // }
+        // for(int i=0;i<n;i++){
+        //     list.add(nums2[i]);
+        // }
+        // list.sort(null);
+        // for(int i=0;i<m+n;i++){
+        //     nums1[i]=list[i];
+        for(int i=m;i<m+n;i++){
+            if(nums1[i]==0){
+                nums1[i]=nums2[i-m];
+            }
+        }
+        Arrays.sort(nums1);
+        
+        return ;
+        
+    }
+}
